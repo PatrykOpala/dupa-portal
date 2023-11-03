@@ -1,0 +1,20 @@
+---
+const {keywords, description, title} = Astro.props;
+import Head from '../components/Head.astro';
+---
+<html lang="en">
+    <Head title={title} keywords={keywords} description={description} />
+	<body>
+		<main>
+            <slot />
+		</main>
+	</body>
+</html>
+
+<style>
+	body{
+		font-family: sans-serif;
+		background-color: rgb(230, 230, 230);
+		height: 98.3vh;
+	}
+</style>

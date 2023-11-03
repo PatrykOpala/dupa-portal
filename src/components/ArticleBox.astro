@@ -1,0 +1,40 @@
+---
+const {articleHeader, articleLink} = Astro.props;
+import dupa_image from '../images/dupa_article.png';
+---
+
+<div class="article-box">
+    <div class="article-image" style="height: 20.6rem;"><img src={dupa_image.src} alt="Logo jeden do jeden dla artykułu." class="article-image-img"></div>
+    <div class="article-text">
+        <span style="font-size: 2rem; margin-left: 10px;">
+            <a href={articleLink} class="article-link">{articleHeader}</a>
+        </span>
+    </div>
+</div>
+
+<style>
+    .article-box{
+		width: calc(67rem / 3 - 15px);
+		height: 20.6rem;
+	}
+	.article-image{
+		aspect-ratio: 1/1;
+	}
+	.article-image-img{
+		width: 100%;
+		height: 100%;
+	}
+	.article-text{
+		transform: translateY(-100%);
+		overflow-wrap: break-word;
+		overflow:hidden;
+		font-weight: 550;
+		padding-bottom: 5px;
+	}
+	.article-link{
+		text-decoration: none; color: #363636;
+	}
+	.article-link:hover{
+		color: #111010;
+	}
+</style>

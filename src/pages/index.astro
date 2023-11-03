@@ -1,16 +1,17 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import ArticleBox from '../components/ArticleBox.astro';
+import ArticleContainer from '../components/ArticleContainer.astro';
+import ArticleSection from '../components/ArticleSection.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout keywords="portal, portale, portal o niczym, o, niczym, portal internetowy, internetowy, nudy, nuda" 
+			description="DUPA to portal o niczym, stworzony dla zabawy." title="DUPA - portal o niczym.">
+	<Header />
+	<ArticleSection sectionHeader="Artykuły">
+		<ArticleContainer>
+			<ArticleBox articleHeader="Śmiech pod wiatr" articleLink="./article/smiech-pod-wiatr"/>
+		</ArticleContainer>
+	</ArticleSection>
+</BaseLayout>

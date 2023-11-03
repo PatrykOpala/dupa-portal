@@ -1,0 +1,44 @@
+---
+const {articleTitle, articleAuthor, articleDate} = Astro.props;
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title={articleTitle}>
+    <div class="article__layout">
+        <div class="article__layout-header">
+            <h1 class="article__layout-header-title">{articleTitle}</h1>
+            <div class="article__metadata-container">
+                <span class="article__metadata-container-text">Autor: {articleAuthor}</span>
+                <span class="article__metadata-container-text">Data publikacji: {articleDate}</span>
+            </div>
+        </div>
+        <article class="article">
+            <p><slot /></p>
+        </article>
+    </div>
+</BaseLayout>
+
+<style>
+    .article__layout{
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+    .article__layout-header{
+        width: 60vw;
+    }
+    .article__layout-header-title{
+        margin-left: 10px; color: rgb(40,40,40);
+    }
+    .article__metadata-container{
+        display: flex; gap: 20px; padding-left: 10px;
+    }
+    .article__metadata-container-text{
+        margin-top: 21px;
+    }
+    .article{
+        width: 50vw;
+        line-height: 2.3rem;
+        color: rgb(40,40,40);
+        margin-top: 20px;
+        font-size: 1.4rem;
+    }
+</style>

@@ -1,0 +1,14 @@
+---
+const {title, description, keywords} = Astro.props;
+import BlankComponent from '../components/BlankComponent.astro';
+---
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    {keywords ? <meta name="keywords" content={keywords} /> : <BlankComponent />}
+    {description ? <meta name="description" content={description} /> : <BlankComponent />}
+    {title ? <title>{title}</title> : <BlankComponent />}
+</head>
