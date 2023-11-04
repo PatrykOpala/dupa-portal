@@ -1,10 +1,11 @@
 ---
 const {articleHeader, articleLink} = Astro.props;
-import dupa_image from '../images/dupa_article.png';
 ---
 
 <div class="article-box">
-    <div class="article-image" style="height: 20.6rem;"><img src={dupa_image.src} alt="Logo jeden do jeden dla artykułu." class="article-image-img"></div>
+    <div class="article-image" style="height: 20.6rem;">
+		<img src="data:image/svg+xml;base64,PHN2ZwogICB3aWR0aD0iMjk5Ljk1OTQ0IgogICBoZWlnaHQ9IjI5OS45ODY1NCIKICAgdmlld0JveD0iMCAwIDc5LjM2NDI2NyA3OS4zNzE0MzkiCiAgIHZlcnNpb249IjEuMSIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0CiAgICAgICB4PSIzOC41NjQzMDQiCiAgICAgICB5PSIxMjUuNzAwMTEiCiAgICAgICB3aWR0aD0iNy4zMjIzMzU3IgogICAgICAgaGVpZ2h0PSI5Ljc2MzExNDkiLz4KICA8Zz4KICAgIDxyZWN0CiAgICAgICBzdHlsZT0iZmlsbDojYmFiYWJhO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjI2NTY0OTtzdHJva2UtZGFzaGFycmF5Om5vbmU7cGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycyIKICAgICAgIHdpZHRoPSI3OS4zNjQyNzMiCiAgICAgICBoZWlnaHQ9Ijc5LjM3MTQzNyIKICAgICAgIHg9IjAiCiAgICAgICB5PSIwIiAvPgogIDwvZz4KICA8Zz4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0wLjU0ODkyMSkiPgogICAgICA8cGF0aAogICAgICAgICBzdHlsZT0iZmlsbDojM2YzZjNmO2ZpbGwtb3BhY2l0eTowLjg3NzE5MztzdHJva2Utd2lkdGg6MC41MzExNjY7cGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycyIKICAgICAgICAgZD0iTSAzMS40ODYsMzEuNDg2IDUyLjQwOTUyNiwyOS4yOTAzMTYgNDcuODg5LDQ3Ljg4OSAyOC4wNjMzMTYsNDkuMTgwNTc5IFoiIC8+CiAgICAgIDx0ZXh0CiAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNDE3Nzc4NywwLDAsMS40MTc3Nzg3LC0xOC43NjA3MDUsLTE0NS4yMTI5MykiCiAgICAgICAgIHN0eWxlPSJmb250LXNpemU6OHB4O2xpbmUtaGVpZ2h0OjEuMjU7Zm9udC1mYW1pbHk6c2Fucy1zZXJpZjt3aGl0ZS1zcGFjZTpwcmU7ZmlsbDojYWVhZWFlO2ZpbGwtb3BhY2l0eToxO3N0cm9rZS13aWR0aDowLjE4NjkxMjtzdHJva2UtZGFzaGFycmF5Om5vbmUiPjx0c3BhbgogICAgICAgICAgIHg9IjM4LjU2NDQ1MyIKICAgICAgICAgICB5PSIxMzIuOTc4MjIiPkQ8L3RzcGFuPjwvdGV4dD4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==" alt="Logo jeden do jeden dla artykułu." class="article-image-img">
+	</div>
     <div class="article-text">
         <span style="font-size: 2rem; margin-left: 10px;">
             <a href={articleLink} class="article-link">{articleHeader}</a>
