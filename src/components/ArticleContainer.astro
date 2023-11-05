@@ -9,4 +9,31 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 5px;
 	}
+	
+	@media screen and (min-width: 600px){
+		.article-container{
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+		}
+	}
+	@media screen and (min-width: 900px){
+		.article-container{
+			width: 50rem;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+	@media screen and (max-width: 600px){
+		.article-container{
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+			margin-inline: auto;
+		}
+	}
+	@media screen and (max-width: 450px){
+		.article-container{
+			width: 28rem;
+			grid-template-columns: 1fr;
+			gap: 10rem;
+		}
+	}
 </style>

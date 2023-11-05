@@ -2,7 +2,44 @@
 const {sectionHeader} = Astro.props;
 ---
 
-<section style="width: 55vw; margin-inline: auto; margin-bottom: 1rem;">
-    <h2 style="display: block; margin: 20px 0;">{sectionHeader}</h2>
+<section class="article-section">
+    <h2 class="article-section-header">{sectionHeader}</h2>
     <slot />
 </section>
+
+<style>
+    .article-section{
+        width: 55vw; margin-inline: auto; margin-bottom: 1rem;
+    }
+    .article-section-header{
+        display: block; margin: 20px 0;
+    }
+    @media screen and (min-width: 600px) {
+        .article-section{
+            width: max-content; height: max-content; margin-inline: auto;
+        }
+        .article-section-header{
+            font-size: 2.7rem;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        .article-section{
+            width: 73vw; margin-inline: auto; margin-bottom: 1rem;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .article-section{
+            width: max-content; height: max-content;
+        }
+        .article-section-header{
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .article-section-header{
+            font-size: 3rem;
+        }
+    }
+
+</style>
