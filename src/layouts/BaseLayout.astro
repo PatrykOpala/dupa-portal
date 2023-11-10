@@ -12,13 +12,20 @@ import Head from '../components/Head.astro';
 </html>
 
 <style>
+	:root{
+		--d-background-color: rgb(230, 230, 230);
+	}
 	body{
 		font-family: sans-serif;
-		background-color: rgb(230, 230, 230);
+		background-color: var(--d-background-color);
 		width: 98vw;
 		height: 98.3vh;
 	}
-
+	@media screen and (min-width: 600px) {
+		body{
+			width: 97vw;
+		}
+	}
 	@media screen and (max-width: 600px) {
 		body{
 			width: 40vw;
