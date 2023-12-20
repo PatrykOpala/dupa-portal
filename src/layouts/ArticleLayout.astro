@@ -29,10 +29,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         margin-left: 10px; color: rgb(40,40,40);
     }
     .article__metadata-container{
-        display: flex; gap: 20px; padding-left: 10px;
+        display: flex; flex-direction: column; padding-left: 10px;
     }
     .article__metadata-container-text{
         margin-top: 21px;
+        font-weight: 600;
     }
     .article{
         width: 90vw;
@@ -41,4 +42,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         margin-top: 20px;
         font-size: 1.4rem;
     }
+
+    @media screen and (max-width: 450px){
+        .article{
+            font-size: 1.1rem;
+        }
+    }
+
 </style>
