@@ -1,9 +1,10 @@
 ---
 const {articleTitle, articleAuthor, articleDate} = Astro.props;
 import BaseLayout from '../layouts/BaseLayout.astro';
+const articleKeywords = articleTitle.split(" ").join(",");
 ---
 
-<BaseLayout title={articleTitle}>
+<BaseLayout title={articleTitle} keywords={articleKeywords}>
     <div class="article__layout">
         <div class="article__layout-header">
             <h1 class="article__layout-header-title">{articleTitle}</h1>
