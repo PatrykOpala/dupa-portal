@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import LeftHeader from '../components/LeftHeader.astro';
 import ArticleBox from '../components/ArticleBox.astro';
 import ArticleContainer from '../components/ArticleContainer.astro';
 import ArticleSection from '../components/ArticleSection.astro';
@@ -8,7 +9,8 @@ import ArticleSection from '../components/ArticleSection.astro';
 
 <BaseLayout keywords="portal,portale,portal o niczym,o,niczym,portal internetowy,internetowy,nudy,nuda" 
 			description="DUPA to portal o niczym, stworzony dla zabawy." title="DUPA - portal o niczym.">
-	<Header />
+	<LeftHeader />
+	<!-- <Header /> -->
 	<ArticleSection sectionHeader="Artykuły">
 		<ArticleContainer>
 			<ArticleBox articleHeader="Chłodne dni" articleLink="./article/chlodne-dni"/>

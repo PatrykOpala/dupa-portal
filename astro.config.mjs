@@ -4,4 +4,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     //site: 'https://patrykopala.github.io',
     //base: '/dupa-portal'
+    outDir: './docs'
 });
