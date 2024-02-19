@@ -2,7 +2,7 @@
 const {sectionHeader} = Astro.props;
 ---
 
-<section class="article-section">
+<section class="article-section" style="margin-top: 25px;">
     <h2 class="article-section-header">{sectionHeader}</h2>
     <slot />
 </section>
@@ -12,7 +12,7 @@ const {sectionHeader} = Astro.props;
         width: 55vw; margin-inline: auto; margin-bottom: 1rem;
     }
     .article-section-header{
-        display: block; margin: 20px 5px;
+        display: block; margin: 20px 5px; background-color: hsl(0, 0%, 31%); width: max-content; padding: 10px 55px; border-radius: 45px; color: var(--d-background-color);
     }
     @media screen and (min-width: 600px) {
         .article-section{
@@ -27,7 +27,7 @@ const {sectionHeader} = Astro.props;
             width: 71vw; margin-inline: auto; margin-bottom: 1rem;
         }
         .article-section-header{
-            font-size: 2rem;
+            font-size: 1.6rem;
         }
     }
     @media screen and (max-width: 600px) {
