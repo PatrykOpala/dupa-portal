@@ -2,14 +2,14 @@
 const {sectionHeader} = Astro.props;
 ---
 
-<section class="article-section" style="margin-top: 25px;">
+<section class="article-section">
     <h2 class="article-section-header">{sectionHeader}</h2>
     <slot />
 </section>
 
 <style>
     .article-section{
-        width: 55vw; margin-inline: auto; margin-bottom: 1rem;
+        width: 55vw; margin-inline: auto; margin-bottom: 1rem; margin-top: 60px;
     }
     .article-section-header{
         display: block; margin: 20px 5px; background-color: hsl(0, 0%, 31%); width: max-content; padding: 10px 55px; border-radius: 45px; color: var(--d-background-color);
