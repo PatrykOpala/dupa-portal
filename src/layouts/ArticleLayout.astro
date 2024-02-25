@@ -9,8 +9,8 @@ const articleKeywords = articleTitle.split(" ").join(",");
         <div class="article__layout-header">
             <h1 class="article__layout-header-title">{articleTitle}</h1>
             <div class="article__metadata-container">
-                <span class="article__metadata-container-text">Autor: {articleAuthor}</span><br/>
-                <span class="article__metadata-container-text">Data publikacji: {articleDate}</span>
+                Autor: {articleAuthor}
+                Data publikacji: {articleDate}
             </div>
         </div>
         <article class="article">
@@ -30,11 +30,7 @@ const articleKeywords = articleTitle.split(" ").join(",");
         margin-left: 10px; color: rgb(40,40,40);
     }
     .article__metadata-container{
-        display: flex; flex-direction: column; padding-left: 10px;
-    }
-    .article__metadata-container-text{
-        margin-top: 21px;
-        font-weight: 600;
+        display: flex; flex-direction: row; padding-left: 10px; gap: 50px; font-weight: 600;
     }
     .article{
         width: 90vw;
