@@ -2,19 +2,22 @@
 const {articleTitle, articleAuthor, articleDate} = Astro.props;
 import BaseLayout from '../layouts/BaseLayout.astro';
 const articleKeywords = articleTitle.split(" ").join(",");
+
+let dateObject = new Date(Date.now());
+let insideArticleDate = articleDate || `${String(dateObject.getDate()).padStart(2, "0")}.${String(dateObject.getMonth()+1).padStart(2, "0")}.${dateObject.getFullYear()}`;
 ---
 
 <BaseLayout title={articleTitle} keywords={articleKeywords}>
     <div class="article__layout">
         <header class="article__layout-header">
             <h1 class="article__layout-header-title">{articleTitle}</h1>
-            <div class="article__metadata-container">
-                <div>Autor: {articleAuthor}</div>
-                <time datetime={articleDate}>Data publikacji: {articleDate}</time>
-            </div>
         </header>
         <article class="article">
             <p><slot /></p>
+            <span style="font-size: 1rem; font-weight: 600; border-radius: 1em; background-color: hsl(0, 0%, 31%); width: max-content; padding: 8px 20px; color: var(--d-background-color);
+            ">Autor: {articleAuthor}</span><br/>
+            <span style="font-size: 1rem; font-weight: 600; border-radius: 1em; background-color: hsl(0, 0%, 31%); width: max-content; padding: 8px 20px; color: var(--d-background-color);
+            ">Data Publikacji: {insideArticleDate}</span>
         </article>
     </div>
 </BaseLayout>
@@ -27,7 +30,7 @@ const articleKeywords = articleTitle.split(" ").join(",");
         width: 94vw;
     }
     .article__layout-header-title{
-        margin-left: 10px; color: rgb(40,40,40);
+        margin-left: 27px; border-radius: 1em; background-color: hsl(0, 0%, 31%); width: max-content; padding: 8px 20px; color: var(--d-background-color);
     }
     .article__metadata-container{
         display: flex; flex-direction: row; padding-left: 10px; gap: 30px; font-weight: 600;
