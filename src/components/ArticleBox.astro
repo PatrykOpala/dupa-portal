@@ -48,26 +48,6 @@ const {articleHeader, articleLink} = Astro.props;
 	.article-link:hover{
 		color: #111010;
 	}
-	@media screen and (min-width: 600px){
-		.article-box{
-			width: 23rem;
-			height: 20.6rem;
-		}
-		.article-text-span{
-			font-size: 2rem;
-		}
-	}
-	@media screen and (max-width: 600px){
-		.article-box{
-			width: calc(67rem / 3);
-			height: 20.6rem;
-		}
-	}
-	@media screen and (min-width: 900px){
-		.article-text-span{
-			font-size: 1.6rem;
-		}
-	}
 	@media screen and (max-width: 1080px){
 		.article-box{
 			width: 96%;
@@ -103,6 +83,26 @@ const {articleHeader, articleLink} = Astro.props;
 			padding: 0.9em;
 			background-color: var(--d-background-color);
 			color: hsl(0, 0%, 31%);
+		}
+	}
+	@media screen and (min-width: 600px){
+		.article-box{
+			width: 23rem;
+			height: 20.6rem;
+		}
+		.article-text-span{
+			font-size: 2rem;
+		}
+	}
+	@media screen and (max-width: 600px){
+		.article-box{
+			width: calc(67rem / 3);
+			height: 20.6rem;
+		}
+	}
+	@media screen and (min-width: 900px){
+		.article-text-span{
+			font-size: 1.6rem;
 		}
 	}
 </style>
