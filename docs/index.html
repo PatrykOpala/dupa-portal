@@ -21,11 +21,13 @@
             background-color: var(--d-background-color);
             width: 98vw;
             height: max-content;
+            margin: 0;
+            padding: 0;
         }
         .link-span{
             display: block;
             width: 4em;
-            margin-top: 1em;
+            margin-top: 0.5em;
             text-align: center;
         }
         .single-link{
@@ -66,12 +68,15 @@
                 width: 40svw;
             }
         }
-        @media screen and (max-width: 1080px){
+        @media screen and (max-width: 680px){
             body{
-                width: 96svw;
+                width: 100%;
+                height: 100%;
             }
             main{
-                height: 90svh;
+                height: 100svh;
+                display: grid;
+                grid-template-rows: 1fr 2fr 1fr;
             }
             .right-separator{
                 display: none;
@@ -79,19 +84,20 @@
             .mobile-menu{
                 display: flex;
                 flex-direction: row;
-                width: 97svw;
-                height: 10em;
+                width: 95.6svw;
+                height: max-content;
                 position: absolute;
-                top: 87svh;
+                top: 81dvh;
                 z-index: 99;
+                border: 1px solid black;
             }
             .single-link{
                 padding-bottom: 0;
                 padding-top: 0;
             }
             .d-logo{
-                width: 3em; height: 3em; padding: 1.3em 0.4em; border-radius: 100%;
-                display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
+                width: 2em; height: 2em; padding: 0.3em 0.3em; border-radius: 100%;
+                display: flex; align-items: center; justify-content: center; font-size: 1.6rem;
             }
             .d-logo-primary{
                 background-color: var(--d-primary-color);
@@ -132,6 +138,9 @@
                 </a>
             </nav>
         </aside>
+        <div class="page-content">
+
+        </div>
         <nav class="mobile-menu">
             <a href="/" class="single-link">
                 <div class="d-logo d-logo-primary">
